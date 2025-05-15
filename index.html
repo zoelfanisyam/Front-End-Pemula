@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Impor script kamu di sini -->
+    <!-- Lampirkan `defer` jika pemanggilan dilakukan dalam <head> -->
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf App</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Tambah Buku Baru</h2>
+        <form id="bookForm" data-testid="bookForm">
+          <div id="formBook">
+            <input
+              id="bookFormTitle"
+              type="text"
+              required
+              data-testid="bookFormTitleInput"
+              placeholder="Judul"
+            />
+            <label for="bookFormTitle">Judul</label>
+          </div>
+          <div id="formBook">
+            <input
+              id="bookFormAuthor"
+              type="text"
+              required
+              data-testid="bookFormAuthorInput"
+              placeholder="Penulis"
+            />
+            <label for="bookFormAuthor">Penulis</label>
+          </div>
+          <div id="formBook">
+            <input
+              id="bookFormYear"
+              type="number"
+              required
+              data-testid="bookFormYearInput"
+              placeholder="Tahun"
+            />
+            <label for="bookFormYear">Tahun</label>
+          </div>
+          <div id="formBook">
+            <input
+            id="bookFormIsComplete"
+            type="checkbox"
+            data-testid="bookFormIsCompleteCheckbox"
+            />
+            <label id="doneRead" for="bookFormIsComplete">Selesai dibaca</label>
+          </div>
+          <button
+            id="bookFormSubmit"
+            type="submit"
+            data-testid="bookFormSubmitButton"
+          >
+            <img src="asset/bx-plus.png" alt=""></span>
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Cari Buku</h2>
+        <form id="searchBook" data-testid="searchBookForm">
+          <div id="formBook">
+            <label for="searchBookTitle">Judul</label>
+            <button
+              id="searchSubmit"
+              type="submit"
+              data-testid="searchBookFormSubmitButton"
+            >
+              <img src="asset/bx-search-alt-2.png" alt="">
+            </button>
+            <input
+              id="searchBookTitle"
+              type="text"
+              data-testid="searchBookFormTitleInput"
+              placeholder="Masukan Judul"
+            />
+          </div>
+          <div id="bookElementSearch">
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookList" data-testid="incompleteBookList">
+          <!-- Struktur Buku Item -->
+        </div>
+      </section>
+
+      <section>
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookList" data-testid="completeBookList">
+          <!-- Struktur Buku Item -->
+        </div>
+      </section>
+
+      <section id="editBook" data-testid="editBook" hidden>
+        <h2>Edit Buku</h2>
+        <form id="editbookForm" data-testid="editbookForm">
+          <div id="formBook">
+            <input
+              id="editbookFormTitle"
+              type="text"
+              required
+              data-testid="editbookFormTitleInput"
+              placeholder="Judul"
+            />
+            <label for="editbookFormTitle">Judul</label>
+          </div>
+          <div id="formBook">
+            <input
+              id="editbookFormAuthor"
+              type="text"
+              required
+              data-testid="editbookFormAuthorInput"
+              placeholder="Penulis"
+            />
+            <label for="editbookFormAuthor">Penulis</label>
+          </div>
+          <div id="formBook">
+            <input
+              id="editbookFormYear"
+              type="number"
+              required
+              data-testid="editbookFormYearInput"
+              placeholder="Tahun"
+            />
+            <label for="editbookFormYear">Tahun</label>
+          </div>
+          <button
+            id="editbookFormEdit"
+            type="submit"
+            data-testid="editbookFormSubmitButton"
+          >
+            <img src="asset/bx-check.png" alt=""></span>
+          </button>
+        </form>
+      </section>
+
+    </main>
+  </body>
+</html>
